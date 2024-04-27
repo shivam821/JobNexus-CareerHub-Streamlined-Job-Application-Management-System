@@ -9,19 +9,26 @@
     <link rel="icon" href="/assets/joomla.png" type="image/x-icon">
 </head>
 <body>
-
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" ><img src="/assets/joomla.png" alt="">JobNexus</a>
-        </div>
-      </nav>
+    
+    {% include 'navbar.html' %}
 
     <div class="container">
         <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
         <img id="img_banner" class="img-fluid mb-4" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" height="320">
     
         <h2 class="text-center mt-2 mb-4">About JobNexus</h2>
-        <p class="lead mb-4">JobNexus is a cutting-edge career platform revolutionizing the way individuals connect with opportunities and companies find top talent. With our intuitive interface and advanced matching algorithms, JobNexus streamlines the job search process, ensuring that both job seekers and employers find their perfect fit. Our platform prioritizes efficiency, transparency, and user experience, providing a seamless journey for candidates and employers alike. Whether you're a seasoned professional seeking your next career move or a company looking to hire the best talent, JobNexus is your trusted partner in navigating the ever-evolving landscape of the job market.</p>
+        <div class="row" style="margin-bottom: 20px;">
+
+            <div class="col-md-6">
+                <p class="lead mb-4">JobNexus is a cutting-edge career platform revolutionizing the way individuals connect with opportunities and companies find top talent. With our intuitive interface and advanced matching algorithms, JobNexus streamlines the job search process, ensuring that both job seekers and employers find their perfect fit. Our platform prioritizes efficiency, transparency, and user experience, providing a seamless journey for candidates and employers alike. Whether you're a seasoned professional seeking your next career move or a company looking to hire the best talent, JobNexus is your trusted partner in navigating the ever-evolving landscape of the job market.</p>
+            </div>
+
+            <div class="d-none d-md-block col-md-2">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="height: 320px; border-radius: 4px;">
+            </div>
+
+            
+        </div>
     
         <h2 class="text-center mt-2 mb-4">Open Positions</h2>
 
@@ -32,9 +39,10 @@
         </p>
     
         <div class="contact_button text-center" style="text-align: center;">
-            <button type="button" class="btn btn-primary btn-lg mb-4">Contact Us</button>
-            <p class="mb-4">Copyright 2024, Shivam Panigrahi</p>
+            <button type="button" class="btn btn-primary btn-lg mb-4" >Contact Us</button>
         </div>
     </div>
+
+    {% include 'footer.html' %}
 </body>
 </html>
