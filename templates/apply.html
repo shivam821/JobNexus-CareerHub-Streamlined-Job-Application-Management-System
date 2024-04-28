@@ -9,6 +9,10 @@
     <link rel="icon" href="/assets/joomla.png" type="image/x-icon">
 </head>
 <body>
+
+
+
+
     {% include 'navbar.html' %}
 
     <div class="container">
@@ -22,39 +26,25 @@
         <div style="margin-bottom: 20px;"><b>Salary : </b>{{ job['salary'] }}</div>
         {% endif %}
 
-        <!-- <div style="margin-bottom: 8px;"><b>About the Role : </b></div>
+        <div style="margin-bottom: 20px;"><b>About the Job : </b>{{ job['about'] }}</div>
 
-        <p>As a Software Engineer specializing in Backend Development, you will play a crucial role in designing, implementing, and maintaining scalable backend systems to support our platform's growth. You will collaborate with cross-functional teams to deliver high-quality software solutions that meet the needs of our users and stakeholders. This position offers an exciting opportunity to work with cutting-edge technologies and contribute to the success of our dynamic engineering team.</p>
-
-        <div style="margin-bottom: 5px;"><b>Responsibilities : </b></div>
-
-        <p>
-            <ol>
-                <li>Design, develop, and deploy robust backend services and APIs to power our applications.</li>
-                <li>Collaborate with frontend developers, product managers, and other stakeholders to understand requirements and translate them into technical solutions.</li>
-                <li>Optimize system performance and scalability through effective code optimization, database tuning, and architectural improvements.</li>
-                <li>Write clean, maintainable, and well-documented code following industry best practices and coding standards.</li>
-                <li>Conduct thorough testing and debugging of backend components to ensure the reliability, security, and performance of our software products.</li>
-                <li>Participate in code reviews, knowledge sharing sessions, and continuous learning activities to foster a culture of excellence and innovation within the team.</li>
-                <li>Stay updated with the latest trends and advancements in backend development technologies and methodologies.</li>
-            </ol>
-        </p>
-
-        <div style="margin-bottom: 5px;"><b>Skills Required : </b></div>
-
-        <p>
-            <ol>
-                <li>Strong proficiency in backend programming languages such as Java, Python, or Node.js.</li>
-                <li>Experience with web frameworks such as Spring Boot, Django, or Express.js.</li>
-                <li>Proficiency in database technologies such as SQL (e.g., MySQL, PostgreSQL) and NoSQL (e.g., MongoDB, Redis).</li>
-                <li>Understanding of RESTful API design principles and experience in building and consuming APIs.</li>
-                <li>Familiarity with cloud platforms such as AWS, Azure, or GCP, and containerization technologies like Docker and Kubernetes.</li>
-                <li>Solid understanding of software development methodologies, version control systems (e.g., Git), and agile practices.</li>
-                <li>Excellent problem-solving skills and the ability to troubleshoot complex technical issues.</li>
-                <li>Strong communication and collaboration skills, with the ability to work effectively in a team-oriented environment.</li>
-                <li>Bachelor's or Master's degree in Computer Science, Engineering, or a related field.</li>
-            </ol>
-        </p> -->
+        <div style="margin-bottom: 20px;">
+            <b>Responsibilities:</b>
+            <ul class="numbered-list">
+                {% for responsibility in job['responsibilities'].split('\n') %}
+                    <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div style="margin-bottom: 20px;">
+            <b>Skills Required:</b>
+            <ul class="numbered-list">
+                {% for skill in job['skills'].split('\n') %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </ul>
+        </div>
 
         <div style="margin-bottom: 20px;"><b>Note : </b>Salary range and specific skills required can vary based on the company's requirements and the candidate's experience level.</div>
 

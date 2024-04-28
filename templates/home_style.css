@@ -47,3 +47,16 @@ p {
     height: 360px;
 
 }
+
+/* Remove default list styles */
+/* Remove default list styles */
+ul.numbered-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Add custom numbering style */
+ul.numbered-list li::before {
+    content: counter(item) ". ";
+    counter-increment: item;
+}
