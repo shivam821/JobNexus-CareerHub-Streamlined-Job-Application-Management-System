@@ -67,7 +67,8 @@ def form_data():
         phone_number = request.form.get('phone_number')
         customFile = request.form.get('customFile')
         print(f"Full Name: {full_name}, Email: {email_address}, Phone: {phone_number}, Resume: {customFile}")
-        return "Form data printed to console"
+        flash('Form data printed to console', 'success')
+        return redirect(url_for('home'))
     return "Form data not received"
 
 

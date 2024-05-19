@@ -344,9 +344,9 @@
           <input type="text" placeholder="Enter Phone Number" name="phone_number" id="phone_number" required>
 
           <label for="Resume"><b>Resume</b></label>
-          <input type="file" class="form-control" id="customFile" name="customFile"/>
+          <input type="file" class="form-control" id="customFile" name="customFile" required>
 
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" class="btn" onclick="myAlert()">Submit</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
@@ -361,6 +361,18 @@
     
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
+    }
+
+    function myAlert() {
+        // alert('Form submission confirmation');
+        var result = document.getElementById("result");
+         var retVal = confirm("Do you want to continue ?");
+         if (retVal == false) {
+            result.innerHTML = "User does not want to continue !";
+         } else {
+            // var url = window.location.href;
+            // window.open(url);
+         }
     }
 </script>
 </body>
